@@ -419,7 +419,7 @@ public class Lab1 {
                 // 如果readFromFile中没有抛出异常，则认为读取成功，退出循环
                 break;
             } catch (Exception ex) {
-                System.out.println("读取文件失败，请重新录入文件路径。错误信息如下：" + ex.getMessage());
+                System.out.println("读取文件失败，请重新录入文件路径。错误信息如下,拉拉啊拉：" + ex.getMessage());
             }
         }
 
