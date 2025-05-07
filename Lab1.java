@@ -221,7 +221,7 @@ public class Lab1 {
 
         // 检查目标单词是否在图中存在
         if (!graph.containsKey(target)) {
-            System.out.println("Word \"" + target + "\" not found in the graph. This is where I change");
+            System.out.println("Word \"" + target + "\" not found in the graph. ");
             return null;
         }
 

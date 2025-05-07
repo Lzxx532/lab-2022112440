@@ -1,0 +1,156 @@
+很好，我们先一步一步准备实验报告的内容和截图说明。我们从 Git 部分开始，包括命令截图说明和报告撰写模板：
+
+---
+
+## 📝 实验报告内容（Git 部分模板）
+
+你可以把以下内容复制进你的 Word 报告中，并将实际截图替换标注部分。
+
+---
+
+### 一、Git 安装与配置
+
+#### 操作说明：
+1. 在官网下载安装 Git：[https://git-scm.com/download](https://git-scm.com/download)；
+2. 使用如下命令配置用户名与邮箱：
+
+```bash
+git config --global user.name "张三"
+git config --global user.email "zhangsan@example.com"
+```
+
+#### 截图示例：
+- [√] Git 安装验证 `git --version`
+- [√] 用户配置命令截图
+
+---
+
+### 二、本地仓库创建与基本操作（实验场景1）
+
+#### R1-R2：初始化仓库、添加并提交
+```bash
+git init
+git add .
+git commit -m "第一次提交：初始版本"
+```
+
+#### R3-R5：修改文件并提交
+```bash
+# 修改文件后
+git status
+git diff
+git add 文件名
+git commit -m "第二次提交"
+```
+
+#### R6：撤销上一次提交
+```bash
+git reset --soft HEAD~1
+```
+
+#### R7：查看提交记录
+```bash
+git log
+```
+
+#### 截图要求：
+- [√] `git init` 后的项目结构
+- [√] `git status`, `git diff`, `git log` 输出截图
+- [√] 撤销提交后再次 `git log` 的截图
+
+---
+
+### 三、连接 GitHub 并推送（实验场景1续）
+
+#### R8：GitHub 创建远程仓库
+
+仓库名：`Lab1-学号`
+
+#### R9：推送本地仓库内容
+```bash
+git remote add origin https://github.com/用户名/Lab1-学号.git
+git branch -M main
+git push -u origin main
+```
+
+#### 截图要求：
+- [√] GitHub 仓库网页截图
+- [√] 命令执行及成功推送截图（含 GitHub 页面刷新后的提交信息）
+
+---
+
+### 四、分支管理（实验场景2）
+
+#### 操作示例：
+
+```bash
+git branch           # 查看分支
+git checkout -b B1   # 创建分支B1
+git checkout -b B2
+git checkout -b C4 B2
+
+# C4 分支提交
+git add .
+git commit -m "C4分支修改"
+
+# B1 分支冲突合并
+git checkout B1
+git merge C4         # 若有冲突，手动解决
+git add .
+git commit -m "合并C4到B1，解决冲突"
+
+# 删除合并分支
+git branch -d C4
+
+# 创建学号分支
+git checkout -b 20251234
+git merge B2
+git push origin 20251234
+```
+
+#### 截图要求：
+- [√] 创建与切换分支命令截图
+- [√] 合并分支成功或冲突处理截图
+- [√] 删除和推送分支的命令与结果截图
+- [√] `git log --graph` 图形化版本树截图
+
+---
+
+### 五、在 IDE 中使用 Git（实验场景3）
+
+#### 操作说明（以 VS Code 为例）：
+1. 打开项目 → Source Control → 初始化 Git；
+2. 通过图形界面提交更改；
+3. 推送到远程 GitHub 仓库。
+
+#### 截图要求：
+- [√] VS Code Git 面板截图
+- [√] 图形界面提交日志截图
+- [√] GitHub 页面显示的新提交记录截图
+
+---
+
+### 六、实验总结
+
+> 本次实验通过 Git 进行版本控制和分支管理，掌握了基本操作流程：
+> - 初始化仓库、提交代码；
+> - 使用分支开发与合并；
+> - 连接远程 GitHub 仓库并推送；
+> - 图形界面与命令行操作相结合；
+> 
+> Git 在多人协作开发中具有重要意义，有助于保障代码的可追踪性与可管理性。
+
+---
+
+## 🧩 你现在可以做的：
+
+1. **根据上述模板执行 Git 操作并截图（用 Windows 截图工具或 macOS 的截图快捷键）**；
+2. **将截图替换模板中的“截图示例”部分**；
+3. **源代码打包为 zip 文件，一起提交**。
+
+---
+
+需要我帮你：
+- 生成 `.git` 提交日志记录？
+- 或者提供 `git log --graph` 示例截图？
+- 还是需要一个完整的 Word 模板文件？
